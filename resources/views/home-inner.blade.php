@@ -76,7 +76,8 @@
                             </div>
                         </div>
                         <div class="col-md-9">
-                            <div class="profile-details">
+                            @foreach($questions as $question)
+                                <div class="profile-details">
                                 <section class="profile">
                                     <div class="">
                                         <div class="profile-details">
@@ -94,19 +95,14 @@
                                                             <div class="col-md-12 col-sm-12 col-xs-12">
                                                                 <div class="profile-info">
                                                                     <div class="descriptions">
-                                                                        <h4>Imran and other have (6 Answers)</h4>
-                                                                        <h3>What is your best travel hack?</h3>
+                                                                        <h4>{{ $question->user->name }} and other have ({{ $question->answers->count() }} Answers)</h4>
+                                                                        <h3>{{ $question->title }} {{ $question->answers->count() }} Answers</h3>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="row">
-                                                            <p class="col-md-12">
-                                                                Love handbags, shoes and clothes. Have way too much stuff in my wardrobe and need to get my act together and do a spring clean soon.
-                                                                Love handbags, shoes and clothes. Have way too much stuff in my wardrobe and need to get my act together and do a spring clean soon.
-                                                                Love handbags, shoes and clothes. Have way too much stuff in my wardrobe and need to get my act together and do a spring clean soon.
-                                                                Love handbags, shoes and clothes. Have way too much stuff in my wardrobe and need to get my act together and do a spring clean soon.
-                                                            </p>
+                                                            {!! substr($question->description, 0,300)  !!}
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-md-12">
@@ -142,204 +138,7 @@
                                     </div>
                                 </section>
                             </div>
-                            <div class="profile-details">
-                                <section class="profile">
-                                    <div class="">
-                                        <div class="profile-details">
-                                            <div class="profile-head">
-                                                <div class="row">
-                                                    <div class="col-xs-12 col-sm-2 col-md-2">
-                                                        <div class="profile-img">
-                                                            <figure>
-                                                                <img src="images/profile_user_avatar.png" class="" width="110px;">
-                                                            </figure>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-10 col-sm-10 col-xs-12">
-                                                        <div class="row">
-                                                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                                                <div class="profile-info">
-                                                                    <div class="descriptions">
-                                                                        <h4>Imran and other have (6 Answers)</h4>
-                                                                        <h3>What is your best travel hack?</h3>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <p class="col-md-12">
-                                                                Love handbags, shoes and clothes. Have way too much stuff in my wardrobe and need to get my act together and do a spring clean soon.
-                                                                Love handbags, shoes and clothes. Have way too much stuff in my wardrobe and need to get my act together and do a spring clean soon.
-                                                                Love handbags, shoes and clothes. Have way too much stuff in my wardrobe and need to get my act together and do a spring clean soon.
-                                                                Love handbags, shoes and clothes. Have way too much stuff in my wardrobe and need to get my act together and do a spring clean soon.
-                                                            </p>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-md-12">
-                                                                <div class="comments-section">
-                                                                    <div class="row">
-                                                                        <div class="col-md-6 col-xs-6">
-                                                                            <ul class="comments_buttons">
-                                                                                <li>
-                                                                                    <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-                                                                                    <span>64</span>
-                                                                                </li>
-
-                                                                                <li>
-                                                                                    <i class="fa fa-heart" aria-hidden="true"></i>
-                                                                                    <span>64</span>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                        <div class="col-md-6 col-xs-6 text-right">
-                                                                            <a href="" class="comments_link">See More</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div><!--profile-head close-->
-                                            <div class="clearfix"></div>
-                                        </div>
-                                        <div class="clearfix"></div>
-
-                                    </div>
-                                </section>
-                            </div>
-                            <div class="profile-details">
-                                <section class="profile">
-                                    <div class="">
-                                        <div class="profile-details">
-                                            <div class="profile-head">
-                                                <div class="row">
-                                                    <div class="col-xs-12 col-sm-2 col-md-2">
-                                                        <div class="profile-img">
-                                                            <figure>
-                                                                <img src="images/profile_user_avatar.png" class="" width="110px;">
-                                                            </figure>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-10 col-sm-10 col-xs-12">
-                                                        <div class="row">
-                                                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                                                <div class="profile-info">
-                                                                    <div class="descriptions">
-                                                                        <h4>Imran and other have (6 Answers)</h4>
-                                                                        <h3>What is your best travel hack?</h3>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <p class="col-md-12">
-                                                                Love handbags, shoes and clothes. Have way too much stuff in my wardrobe and need to get my act together and do a spring clean soon.
-                                                                Love handbags, shoes and clothes. Have way too much stuff in my wardrobe and need to get my act together and do a spring clean soon.
-                                                                Love handbags, shoes and clothes. Have way too much stuff in my wardrobe and need to get my act together and do a spring clean soon.
-                                                                Love handbags, shoes and clothes. Have way too much stuff in my wardrobe and need to get my act together and do a spring clean soon.
-                                                            </p>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-md-12">
-                                                                <div class="comments-section">
-                                                                    <div class="row">
-                                                                        <div class="col-md-6 col-xs-6">
-                                                                            <ul class="comments_buttons">
-                                                                                <li>
-                                                                                    <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-                                                                                    <span>64</span>
-                                                                                </li>
-
-                                                                                <li>
-                                                                                    <i class="fa fa-heart" aria-hidden="true"></i>
-                                                                                    <span>64</span>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                        <div class="col-md-6 col-xs-6 text-right">
-                                                                            <a href="" class="comments_link">See More</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div><!--profile-head close-->
-                                            <div class="clearfix"></div>
-                                        </div>
-                                        <div class="clearfix"></div>
-
-                                    </div>
-                                </section>
-                            </div>
-                            <div class="profile-details">
-                                <section class="profile">
-                                    <div class="">
-                                        <div class="profile-details">
-                                            <div class="profile-head">
-                                                <div class="row">
-                                                    <div class="col-xs-12 col-sm-2 col-md-2">
-                                                        <div class="profile-img">
-                                                            <figure>
-                                                                <img src="images/profile_user_avatar.png" class="" width="110px;">
-                                                            </figure>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-10 col-sm-10 col-xs-12">
-                                                        <div class="row">
-                                                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                                                <div class="profile-info">
-                                                                    <div class="descriptions">
-                                                                        <h4>Imran and other have (6 Answers)</h4>
-                                                                        <h3>What is your best travel hack?</h3>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <p class="col-md-12">
-                                                                Love handbags, shoes and clothes. Have way too much stuff in my wardrobe and need to get my act together and do a spring clean soon.
-                                                                Love handbags, shoes and clothes. Have way too much stuff in my wardrobe and need to get my act together and do a spring clean soon.
-                                                                Love handbags, shoes and clothes. Have way too much stuff in my wardrobe and need to get my act together and do a spring clean soon.
-                                                                Love handbags, shoes and clothes. Have way too much stuff in my wardrobe and need to get my act together and do a spring clean soon.
-                                                            </p>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-md-12">
-                                                                <div class="comments-section">
-                                                                    <div class="row">
-                                                                        <div class="col-md-6 col-xs-6">
-                                                                            <ul class="comments_buttons">
-                                                                                <li>
-                                                                                    <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-                                                                                    <span>64</span>
-                                                                                </li>
-
-                                                                                <li>
-                                                                                    <i class="fa fa-heart" aria-hidden="true"></i>
-                                                                                    <span>64</span>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                        <div class="col-md-6 col-xs-6 text-right">
-                                                                            <a href="" class="comments_link">See More</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div><!--profile-head close-->
-                                            <div class="clearfix"></div>
-                                        </div>
-                                        <div class="clearfix"></div>
-
-                                    </div>
-                                </section>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </section>

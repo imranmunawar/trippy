@@ -17,6 +17,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'QuestionController@index')->name('home');
 Route::get('/follow-location', 'HomeController@followLocation')->name('follow_location');
 Route::get('/unfollow-location', 'HomeController@unfollowLocation')->name('unfollow_location');
